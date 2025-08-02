@@ -30,7 +30,7 @@ import org.openjdk.jcstress.infra.results.III_Result;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @JCStressTest
-@Description("Demonstrates the behaviour of opaque mode")
+@Description("Demonstrates the behaviour of acquire release mode")
 @Outcome(id = "0, 0, 0", expect = Expect.ACCEPTABLE)
 @Outcome(id = "0, 0, 1", expect = Expect.ACCEPTABLE)
 @Outcome(id = "0, 0, 2", expect = Expect.ACCEPTABLE)
