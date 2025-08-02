@@ -50,21 +50,21 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Outcome(id = "2, 1, 1", expect = Expect.FORBIDDEN, desc = "b=2, then b=1")
 @Outcome(id = "2, 1, 2", expect = Expect.ACCEPTABLE)
 @State
-public class AtomicIntegerSetGetOpaqueTest {
+public class AtomicIntegerSetGetPlainTest {
     final AtomicInteger a = new AtomicInteger();
     final AtomicInteger b = new AtomicInteger();
 
     @Actor
     public void actor1() {
-        a.setOpaque(1);
-        b.setOpaque(1);
-        b.setOpaque(2);
+        a.setPlain(1);
+        b.setPlain(1);
+        b.setPlain(2);
     }
 
     @Actor
     public void actor2(III_Result r) {
-        r.r1 = b.getOpaque();
-        r.r2 = a.getOpaque();
-        r.r3 = b.getOpaque();
+        r.r1 = b.getPlain();
+        r.r2 = a.getPlain();
+        r.r3 = b.getPlain();
     }
 }
